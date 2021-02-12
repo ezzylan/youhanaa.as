@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
 :root {
-  --primary: #ffffff;
+  --primary: #F8F9FA;
   --secondary: #cec0a5;
-  --tertiary: #565F3F;
+  --tertiary: #212529;
 }
 
 body {
   padding-top: 5rem;
   background: var(--secondary);
+}
+
+.container {
+  max-width: 960px;
 }
 
 .navbar {
@@ -17,17 +21,10 @@ body {
 }
 
 .navbar-brand,
-#product-brand,
-#about-brand,
-#contact-brand {
+#product-heading,
+#about-heading,
+#contact-heading {
   font-family: "Dancing Script", cursive;
-}
-
-.blockquote,
-#product-container,
-#about-container,
-#contact-container {
-  background-color: var(--primary);
 }
 
 .bd-placeholder-img {
@@ -43,7 +40,7 @@ body {
 }
 
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 13rem;
   z-index: 10;
 }
 
@@ -59,6 +56,26 @@ body {
   height: 20rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* nanti kena cek balik */
+.carousel-item:hover {
+  animation: fadeImg 0.2s ease forwards;
+}
+
+@keyframes fadeImg {
+  0% {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+  }
+  100% {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+}
+
 .footer {
   background-color: var(--primary);
 }
@@ -72,7 +89,8 @@ body {
     font-size: 3.5rem;
   }
 
-  .carousel-item, .carousel-item > img{
+  .carousel-item,
+  .carousel-item > img {
     height: 32rem;
   }
 }
